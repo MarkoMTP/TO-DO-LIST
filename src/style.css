@@ -1,0 +1,49 @@
+@font-face {
+    font-family: rubik;
+    src: url(./assets/RubikBrokenFax-Regular.ttf);
+}
+
+body , html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.menuBtn {
+    width: 80px;
+    height: 80px;
+    background: url(./assets/menuBtn.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.menuBtn:hover {
+    cursor: pointer;
+    background-color: bisque;
+}
+
+.header{
+display: flex;
+justify-content: space-between;
+font-family: rubik;
+font-size: 1.5rem;
+border-bottom: 1px black solid;
+background-color: rgb(185, 185, 252);
+padding: 4px;
+}
+
+.rndmBtn {
+    width: 80px;
+    height: 80px;
+    background: url(./assets/cool-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+border: 0;
+margin-top: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+
+
