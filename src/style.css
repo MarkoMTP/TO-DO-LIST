@@ -7,6 +7,15 @@ body , html {
     margin: 0;
     border: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    height: 100dvh;
+    width: 100dvw;
+    overflow: auto;
+    
 }
 
 .menuBtn {
@@ -43,6 +52,13 @@ padding: 4px;
 border: 0;
 margin-top: 0.7rem;
     margin-right: 0.7rem;
+}
+
+.content {
+width: 100%;
+height: 100%;
+background-color: saddlebrown;
+
 }
 
 

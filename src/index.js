@@ -1,9 +1,9 @@
 
+import addSideBar from "./stlyes/sidebar";
 
 
 
-
-const container = document.getElementById("container")
+export const container = document.getElementById("container")
 
 
 
@@ -14,6 +14,7 @@ const container = document.getElementById("container")
 
  const menuBtn = document.createElement("button");
  menuBtn.classList.add("menuBtn");
+
 
  headerDiv.appendChild(menuBtn);
 
@@ -28,4 +29,9 @@ rndmBtn.classList.add("rndmBtn")
  headerDiv.appendChild(rndmBtn);
 
  container.appendChild(headerDiv)
- 
+
+export const content = document.createElement("div")
+content.classList.add("content")
+ container.appendChild(content)
+
+ menuBtn.addEventListener("click", addSideBar())
