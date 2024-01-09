@@ -1,0 +1,47 @@
+.sidebar {
+    margin-left: -200px;
+    background-color: rgb(231, 227, 227);
+    border: 0.4px rgb(0, 0, 0) solid;
+    width: 20%;
+    height: 100%;
+    transition: margin-left 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    
+}
+
+
+    .myButton {
+        width: 40%;
+        font-size: 1rem;
+        border-radius: 10px;
+        margin: 0.3rem;
+        background-color: antiquewhite;
+    }
+        .myButton:hover {
+        background: #A4A4A4; 
+    cursor: pointer;}
+
+    .projectH1 {
+        font-size: 3rem;
+        margin-left:10px ;
+        width: 100%;
+    border-bottom: 3px black dotted;
+    margin-bottom: -6px;
+
+    }
+    .myAddButton {
+        width: 40%;
+        font-size: 1rem;
+        border-radius: 10px;
+        margin-left: 0.3rem;
+        padding: 0.3rem;
+    }
+    .myAddButton:hover {
+        background: #e8bebe; 
+    cursor: pointer;}
+
+
+

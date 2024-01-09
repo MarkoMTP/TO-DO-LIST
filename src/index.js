@@ -1,6 +1,6 @@
 
-import addSideBar from "./stlyes/sidebar";
-
+import addSideBar from "./sidebar.js";
+import "./style.css"
 
 
 export const container = document.getElementById("container")
@@ -34,4 +34,4 @@ export const content = document.createElement("div")
 content.classList.add("content")
  container.appendChild(content)
 
- menuBtn.addEventListener("click", addSideBar())
+ menuBtn.addEventListener("click", addSideBar)
