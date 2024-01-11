@@ -2,6 +2,9 @@ import { container, content } from "../index.js"
 import "../stlyes/sidebar.css"
 
 
+
+
+
 export default function addSideBar() {
     
   const sidebarDiv = document.createElement("div")
@@ -15,9 +18,8 @@ export default function addSideBar() {
   createAddProjectBtn(projectDiv)
   
   
-  setTimeout(function() {
-      sidebarDiv.style.marginLeft = '0';
-    }, 0);
+  
+  
   
 sidebarDiv.appendChild(projectDiv)
   
