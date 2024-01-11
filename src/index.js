@@ -1,5 +1,5 @@
 
-import addSideBar from "./sidebar.js";
+import addSideBar from "./modules/sidebar.js";
 import "./style.css"
 
 
@@ -34,4 +34,7 @@ export const content = document.createElement("div")
 content.classList.add("content")
  container.appendChild(content)
 
- menuBtn.addEventListener("click", addSideBar)
+ menuBtn.addEventListener("click", addSideBar())
+
+
+ /// commit mora bit kako si doda task.js i napravia promjene
