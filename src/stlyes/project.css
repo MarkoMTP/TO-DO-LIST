@@ -8,9 +8,12 @@ margin: 10px;
 height: 30px;
 display: flex;
 align-items: center;
-justify-self: center;
-font-size: 1.3rem;
+justify-content: space-around;
+font-size: 1rem;
 font-weight: 600;
+
+
+
 }
 
 .project:hover {

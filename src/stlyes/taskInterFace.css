@@ -17,8 +17,9 @@
     position: absolute;
     right: 10px;
     top: 20px;
-    background:url(../assets/inbox.svg) ;
+    background:url(../assets/folder-plus-svgrepo-com.svg) ;
     background-repeat: no-repeat;
+    background-size: cover;
     
 
     width: 6rem;

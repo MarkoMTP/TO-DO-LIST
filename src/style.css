@@ -66,13 +66,13 @@ display: flex;
 
 
 .titleDialog {
-        width: 10rem;
+        width: 20rem;
     height: 10rem;
+
     
-    transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 50px;
-    border: 1px solid #ccc;
+    padding: 5rem;
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -80,8 +80,7 @@ display: flex;
 .submitBtn {
 
 
-    width: 1rem;
-    height: 1rem;
+    width: 5rem;
 }
 
 #title {
@@ -90,5 +89,15 @@ color: black ;
 font-size: 1rem;
 
 
+
+}
+
+.formProject {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 
 }

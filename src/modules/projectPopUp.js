@@ -11,6 +11,8 @@ export default function openModal(div) {
     // Create form element
     const form1 = document.createElement("form");
     form1.setAttribute("method", "dialog");
+    form1.setAttribute("class", "formProject");
+
 
     // Create input element
     const input1 = document.createElement("input");
@@ -19,33 +21,48 @@ export default function openModal(div) {
     input1.setAttribute("id", "title");
     input1.setAttribute("placeholder", "title");
     input1.setAttribute("maxlength", "11");
+    input1.setAttribute("required", "")
 
-    let enteredTitle = document.getElementById("title")
+
+
+    //date input creating
+
+    const inputDate = document.createElement("input");
+    inputDate.setAttribute("type", "date");
+    inputDate.setAttribute("id", "date");
+
+
+
+
+    
 
 
 //creating submit button
 const submitBtn = document.createElement("button");
 submitBtn.setAttribute('type', 'submit')
 submitBtn.setAttribute('class', 'submitBtn')
+submitBtn.textContent = "Submit"
 
 submitBtn.addEventListener("click", () => {
 event.preventDefault()
-ProjectAdd(div, enteredTitle.value);
-
+ProjectAdd(div, input1.value, inputDate.value);
 dialog1.close()
 
-
+// dialog1.style.display = "none"
 })
 //submiting subBtn to Form
-form1.appendChild(submitBtn)
+
 
 
 
 
 
     // Append input to form
+    
+    form1.appendChild(inputDate);
     form1.appendChild(input1);
 
+    form1.appendChild(submitBtn)
     // Append form to dialog
     dialog1.appendChild(form1);
 
