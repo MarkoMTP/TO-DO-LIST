@@ -1,34 +1,45 @@
-import { container, content } from "../index.js"
+import { container, content, sidebarDiv } from "../index.js"
+import ProjectAdd from "./exampleProject.js"
 import "../stlyes/sidebar.css"
+import openModal from "./projectPopUp.js"
 
 
 
 
+export default (function addSideBar() {
+  
 
-export default function addSideBar() {
-    
-  const sidebarDiv = document.createElement("div")
-  sidebarDiv.classList.add("sidebar")
+
+  const sideBar = document.createElement("div")
+  sideBar.classList.add("sidebar")
 
   const projectDiv = document.createElement("div")
   projectDiv.classList.add("projectDiv")
 
-  createH1(sidebarDiv)
+  createH1(sideBar)
   
-  createAddProjectBtn(projectDiv)
+    
+     
+ 
   
+   const {addBtn} =  createAddProjectBtn(projectDiv)
   
+   addBtn.addEventListener("click", () => {
+    openModal(projectDiv)
+ 
   
-  
-  
-sidebarDiv.appendChild(projectDiv)
-  
-  content.appendChild(sidebarDiv)
-  
-  container.appendChild(content)
+  })
 
-  return { sidebarDiv }
-  }
+
+
+
+
+sideBar.appendChild(projectDiv)
+  
+  sidebarDiv.appendChild(sideBar)
+
+  return { sideBar, projectDiv }
+  })
   
 
   
@@ -57,13 +68,11 @@ function createH1(div) {
    
   div.appendChild(addBtn)
   
-  
-  addBtn.addEventListener("click", () => {
-
    
-
-
-    })
-
+    
+    return { addBtn}
 
 }
+
+
+

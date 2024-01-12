@@ -2,9 +2,8 @@
     margin-left: 0px;
     background-color: rgb(231, 227, 227);
     border: 0.4px rgb(0, 0, 0) solid;
-    width: 20%;
+    width: 100%;
     height: 100%;
-    transition: margin-left 0.7s ease;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
@@ -51,6 +50,7 @@
         flex-direction: column;
         width: 100%;
         gap: 10px;
+     
     }
 
 

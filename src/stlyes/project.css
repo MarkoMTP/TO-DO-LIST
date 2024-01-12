@@ -1,0 +1,20 @@
+
+
+.project {
+
+border: red 1px solid;
+width: 90%;
+margin: 10px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-self: center;
+font-size: 1.3rem;
+font-weight: 600;
+}
+
+.project:hover {
+    background-color: burlywood;
+    height: 50px;
+cursor: pointer;
+}

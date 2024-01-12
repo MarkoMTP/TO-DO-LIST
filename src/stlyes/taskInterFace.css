@@ -1,0 +1,30 @@
+
+
+
+.taskDiv {
+
+    position: relative;
+    width: 100%;
+    text-align: end;
+    
+    }
+
+
+
+
+.AddTaskBtn {
+
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background:url(../assets/inbox.svg) ;
+    background-repeat: no-repeat;
+    
+
+    width: 6rem;
+    height: 6rem;
+
+
+
+
+}
