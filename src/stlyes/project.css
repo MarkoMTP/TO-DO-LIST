@@ -1,6 +1,6 @@
 
 
-.project {
+.projectBox {
 
 border: red 1px solid;
 width: 90%;
@@ -16,8 +16,15 @@ font-weight: 600;
 
 }
 
-.project:hover {
+.projectBox:hover {
     background-color: burlywood;
     height: 50px;
 cursor: pointer;
+}
+
+.project {
+font-size: 0.8rem;
+
+
+
 }

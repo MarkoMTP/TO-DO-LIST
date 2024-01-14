@@ -1,7 +1,8 @@
 import { container, content, sidebarDiv } from "../index.js"
-import ProjectAdd from "./exampleProject.js"
+import ProjectAdd from "./projectAddModule.js"
 import "../stlyes/sidebar.css"
 import openModal from "./projectPopUp.js"
+import ExampleAdd from "./exampleProject.js"
 
 
 
@@ -37,23 +38,13 @@ export default (function addSideBar() {
 sideBar.appendChild(projectDiv)
   
   sidebarDiv.appendChild(sideBar)
-
+  ExampleAdd(sideBar)
   return { sideBar, projectDiv }
   })
   
 
   
 
-
-function createH1(div) {
-
-
-  const projectH1 = document.createElement("h2")
-  projectH1.textContent = "Projects"
-  projectH1.classList.add("projectH1")
-  div.appendChild(projectH1)
-
-}
 
 
 
@@ -76,3 +67,13 @@ function createH1(div) {
 
 
 
+
+function createH1(div) {
+
+
+  const projectH1 = document.createElement("h2")
+  projectH1.textContent = "Projects"
+  projectH1.classList.add("projectH1")
+  div.appendChild(projectH1)
+
+}

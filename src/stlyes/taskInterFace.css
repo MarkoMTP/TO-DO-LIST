@@ -2,11 +2,20 @@
 
 
 .taskDiv {
+background-color: rgb(255, 255, 255);
+border: red 1px solid;
+margin-top: 5rem;
+margin-left: 10rem;
+width: 70rem;
+height: 5rem;
+    }
 
-    position: relative;
-    width: 100%;
-    text-align: end;
-    
+    .taskContainer {
+        background-color: rgb(222, 242, 242);
+        position: relative;
+        width: 100%;
+        text-align: end;
+
     }
 
 
@@ -29,3 +38,4 @@
 
 
 }
+

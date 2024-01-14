@@ -1,16 +1,9 @@
 import { container } from "../index.js";
-import ProjectAdd, {ProjectFactory, addToProjects,  projectCollection} from "./projectAddModule.js";
+import  addTask  from "./addTask.js";
 
 import "../style.css"
 
-
-
-addToProjects("Project 28", 1);
-
-
-
-
-export default function openModal(div) {
+export default function openTaskModal(div) {
 
 
 
@@ -54,7 +47,7 @@ submitBtn.textContent = "Submit"
 submitBtn.addEventListener("click", () => {
 event.preventDefault()
 
-ProjectAdd(div, input1.value, inputDate.value);
+addTask(div, input1.value)
 
 dialog1.close()
 
