@@ -12,7 +12,6 @@ import openTaskModal from "./taskPopUp.js";
 export function taskInterface() {
     taskContainer.innerHTML = ""
 
-    const taskArray = [];
 
     const taskOfProjectDiv = document.createElement("div")
 
@@ -20,7 +19,7 @@ export function taskInterface() {
     
  const AddTaskButton = document.createElement("button");
 AddTaskButton.classList.add("AddTaskBtn")
-AddTaskButton.addEventListener("click", openTaskModal(taskOfProjectDiv))
+AddTaskButton.addEventListener("click",() => {openTaskModal(taskOfProjectDiv)})
 
 
 
@@ -52,7 +51,6 @@ AddTaskButton.addEventListener("click", openTaskModal(taskOfProjectDiv))
                 taskContainer.innerHTML = ""
 
                 const taskOfProjectDiv = document.createElement("div")
-            const taskArray = [];
         
             
          const AddTaskButton = document.createElement("button");

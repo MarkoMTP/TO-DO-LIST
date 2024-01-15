@@ -1,5 +1,16 @@
-
+import { addTaskToProject } from "./projectAddModule1";
 import "../stlyes/taskInterFace.css"
+
+
+
+
+
+
+
+
+
+
+
 
 export  default function addTask(div, title, ) {
 

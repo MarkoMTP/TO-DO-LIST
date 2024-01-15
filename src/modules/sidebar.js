@@ -1,8 +1,9 @@
 import { container, content, sidebarDiv } from "../index.js"
-import ProjectAdd from "./projectAddModule.js"
+import {addProjectToCollection, createDomProjects} from "./projectAddModule1.js"
+import "../stlyes/project.css"
+
 import "../stlyes/sidebar.css"
 import openModal from "./projectPopUp.js"
-import ExampleAdd from "./exampleProject.js"
 
 
 
@@ -20,7 +21,6 @@ export default (function addSideBar() {
   createH1(sideBar)
   
     
-     
  
   
    const {addBtn} =  createAddProjectBtn(projectDiv)
@@ -28,9 +28,11 @@ export default (function addSideBar() {
    addBtn.addEventListener("click", () => {
     openModal(projectDiv)
  
-  
+  return {projectDiv }
+
   })
 
+  addProjectToCollection(projectDiv, "Example", "20.20.2002")
 
 
 
@@ -38,7 +40,7 @@ export default (function addSideBar() {
 sideBar.appendChild(projectDiv)
   
   sidebarDiv.appendChild(sideBar)
-  ExampleAdd(sideBar)
+  
   return { sideBar, projectDiv }
   })
   
