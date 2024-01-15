@@ -1,6 +1,6 @@
 import { container } from "../index.js";
 import "../style.css"
-import { addProjectToCollection , createDomProjects} from "./projectAddModule1.js";
+import { createDomProjects, ProjectFactory, projectCollection} from "./projectAddModule1.js";
 
 
 
@@ -52,11 +52,16 @@ submitBtn.textContent = "Submit"
 submitBtn.addEventListener("click", () => {
 event.preventDefault()
 
-addProjectToCollection(div, input1.value, inputDate.value)
 
+
+const newProject =  ProjectFactory( input1.value, inputDate.value)
+projectCollection.push(newProject);
+createDomProjects(div, newProject);
+
+
+console.log(projectCollection);
 
 dialog1.close()
-
 
 
 

@@ -3,7 +3,7 @@ import "../stlyes/project.css"
 import { taskInterface } from "./taskInterface";
 
 
-        function ProjectFactory (title, date ){
+export  function ProjectFactory (title, date ){
             return {
                 title,
                  date,
@@ -15,45 +15,44 @@ import { taskInterface } from "./taskInterface";
 
         }
 
-        const projectCollection = [];
+export        const projectCollection = [];
 
 
-    //    export function TaskFactory(title) {
+  
 
-    //         return {
+export function TaskFactory(title) {
 
-    //             title,
-
-    //         }
-
-
-
-    //     }
-
-    //  export   function addTaskToProject( project , title, ) {  
-
-    //         const newTask = TaskFactory(title);
-    //         project.tasks.push(newTask)
-
-
-    //     }
-
-
-
-        export    function addProjectToCollection(div, title, date) {
+    return {
+  
+        title,
+  
+    }
+  
+  
+  
+  }
+  
+  export   function addTaskToProject( project , title, ) {  
+  
+    const newTask = TaskFactory(title);
+    project.tasks.push(newTask)
+  
+  
+  }
+  
+  
+      
+  const projectHelp = ProjectFactory("Markone", "8")
+  addTaskToProject(projectHelp, "ja ne znam sta ja radim 2")
+projectCollection.push(projectHelp)
+console.log(projectCollection);  
         
-                const newProject =  ProjectFactory(title, date)
-                projectCollection.push(newProject);
-                createDomProjects(div, newProject) 
-    console.log(projectCollection);
-    
+        // addTaskToProject( newProject , title, )
 
-       
-        }
+        
 
-        // addTaskToProject( newProject , title, ) 
 
-        console.log(projectCollection);
+      
 
 
 
@@ -85,7 +84,8 @@ import { taskInterface } from "./taskInterface";
                 const viewProjectBtn = document.createElement("button")
                 viewProjectBtn.textContent = 'View';
                 viewProjectBtn.addEventListener("click", () => {
-                    taskInterface()
+ taskInterface()
+                  
                     
                 
                 })

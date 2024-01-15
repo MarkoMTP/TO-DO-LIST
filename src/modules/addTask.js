@@ -1,18 +1,12 @@
-import { addTaskToProject } from "./projectAddModule1";
+
+import { createDomProjects, ProjectFactory , projectCollection } from "./projectAddModule1.js"
+
 import "../stlyes/taskInterFace.css"
 
 
 
 
-
-
-
-
-
-
-
-
-export  default function addTask(div, title, ) {
+export  default function addTaskToDom(div, title, ) {
 
 
       const mainDivForTasks = document.createElement("div");
