@@ -4,7 +4,7 @@ import { addTaskToProject, TaskFactory, addTaskToDom } from "./addTask.js"
 
 import "../style.css"
 
-export default function openTaskModal(div, project) {
+export default function openTaskModal(div, project, task) {
 
 
 

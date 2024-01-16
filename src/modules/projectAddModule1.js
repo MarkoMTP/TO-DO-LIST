@@ -1,5 +1,5 @@
 import { taskContainer, forEachProjectInterface } from "./taskInterface.js";
-
+import { addTaskToDom } from "./addTask.js";
 import "../stlyes/project.css"
 
 
@@ -61,9 +61,12 @@ export  function ProjectFactory (title, date ){
                 const viewProjectBtn = document.createElement("button")
                 viewProjectBtn.textContent = 'View';
                 viewProjectBtn.addEventListener("click", () => {
+taskContainer.innerHTML = "";
+addTaskToDom(taskContainer, project)
 
 forEachProjectInterface(taskContainer, project)
                     
+
                     
                 
                 })

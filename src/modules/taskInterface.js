@@ -17,10 +17,12 @@ import openTaskModal from "./taskPopUp.js";
 export function forEachProjectInterface(div, project) {
 
 
+    
 
+    
 
     const taskOfProjectDiv = document.createElement("div")
-
+    
 
 
     const AddTaskButton = document.createElement("button");
@@ -34,5 +36,6 @@ export function forEachProjectInterface(div, project) {
 
 
     div.appendChild(taskOfProjectDiv)
+
 }
   
