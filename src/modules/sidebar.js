@@ -1,10 +1,11 @@
 import { container, content, sidebarDiv } from "../index.js"
 import { createDomProjects, ProjectFactory , projectCollection } from "./projectAddModule1.js"
-import "../stlyes/project.css"
+import { addTaskToProject, TaskFactory, addTaskToDom } from "./addTask.js"  
 
-import "../stlyes/sidebar.css"
 import openModal from "./projectPopUp.js"
-
+import { taskOfProjectDiv } from "./taskInterface.js"
+import "../stlyes/project.css"
+import "../stlyes/sidebar.css"
 
 
 export default (function addSideBar() {
@@ -36,8 +37,7 @@ export default (function addSideBar() {
 
   const exampleProject =  ProjectFactory("Example", "20.20.2002")
   projectCollection.push(exampleProject);
-  createDomProjects(projectDiv, exampleProject);
-
+createDomProjects(projectDiv,exampleProject)
 
 sideBar.appendChild(projectDiv)
   

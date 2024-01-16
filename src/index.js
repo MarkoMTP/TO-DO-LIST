@@ -1,7 +1,8 @@
 import {addProjectToCollection, createDomProjects} from "./modules/projectAddModule1.js"
 import addHeader from "./modules/header.js";
-import { taskInterface } from "./modules/taskInterface.js";
+import { taskContainer } from "./modules/taskInterface.js";
 import addSideBar from "./modules/sidebar.js";
+import "./stlyes/taskInterFace.css"
 import "./style.css";
 
 
@@ -25,5 +26,7 @@ content.appendChild(sidebarDiv)
  container.appendChild(content)
 
  addSideBar()
+ content.appendChild(taskContainer)
+
 
 //moraces izbrisat  sve ove funkcije za project add i task add i napravit ih sa factory funkcijama i arrays ono ka library prikazat ih..
