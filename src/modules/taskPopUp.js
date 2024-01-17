@@ -2,9 +2,9 @@ import { container } from "../index.js";
 import  addTask  from "./addTask.js";
 import { addTaskToProject, TaskFactory, addTaskToDom } from "./addTask.js"  
 
-import "../style.css"
+import "../stlyes/taskInterFace.css"
 
-export default function openTaskModal(div, project, task) {
+export default function openTaskModal(div, project) {
 
 
 
@@ -26,8 +26,8 @@ export default function openTaskModal(div, project, task) {
     input1.setAttribute("type", "text");
     input1.setAttribute("name", "title");
     input1.setAttribute("id", "title");
-    input1.setAttribute("placeholder", "title");
-    input1.setAttribute("maxlength", "11");
+    input1.setAttribute("placeholder", "Task");
+    
     input1.setAttribute("required", "")
 
 
@@ -59,9 +59,9 @@ dialog1.close()
 })
 //
     
-    form1.appendChild(inputDate);
+ 
     form1.appendChild(input1);
-
+   form1.appendChild(inputDate);
     form1.appendChild(submitBtn)
     // Append form to dialog
     dialog1.appendChild(form1);
