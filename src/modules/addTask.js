@@ -23,11 +23,11 @@ export function TaskFactory(title, duedate, priority) {
 
 
 
-export   function addTaskToProject(div, project , title ) {  
+export   function addTaskToProject(div, project , title, date, priority ) {  
   div.innerHTML = '';
- const task = TaskFactory(title);
+ const task = TaskFactory(title, date, priority);
   project.tasks.push(task)
-  addTaskToDom(div, project)
+  addTaskToDom(div, project) 
 
 }
 
@@ -37,7 +37,7 @@ export   function addTaskToProject(div, project , title ) {
 export   function addTaskToDom(div, project) {
 div.innerHTML = ""
 
-project.tasks.forEach(task => {
+project.tasks.forEach((task, index) => {
   
 
       const mainDivForTasks = document.createElement("div");
@@ -67,6 +67,13 @@ infoHeading.textContent = "Task Info";
 
     const deleteTaskBtn = document.createElement("button")
   deleteTaskBtn.textContent = "Delete"
+deleteTaskBtn.addEventListener("click", () => {
+  div.removeChild(mainDivForTasks)
+  project.tasks.splice(index, 1);
+
+} )
+
+
 
   divForDate.appendChild(infoHeading)
     divForDate.appendChild(taskDate)
@@ -80,5 +87,7 @@ div.appendChild(mainDivForTasks)
 console.log(projectCollection);
 
 })
+
+
 
 }

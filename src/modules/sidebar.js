@@ -38,6 +38,10 @@ export default (function addSideBar() {
   projectCollection.push(exampleProject);
   const exampleTask = TaskFactory("Example About How Amazing This Project Is", "20.11.2222", "important")
   exampleProject.tasks.push(exampleTask)
+
+
+
+
 createDomProjects(projectDiv,exampleProject)
 
 sideBar.appendChild(projectDiv)

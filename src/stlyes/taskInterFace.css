@@ -2,10 +2,12 @@
 
 
 .taskDiv {
+    
 background-color: rgb(255, 255, 255);
 border: rgb(255, 225, 225) 1px solid;
 margin-top: 5rem;
 margin-left: 10rem;
+margin-bottom: 5rem;
 width: 70rem;
 height: 10rem;
 display: flex;
@@ -40,12 +42,14 @@ font-style: italic;
         }
 
     .taskContainer {
+        position: relative;
         background-color: rgb(253, 234, 255);
-        width: 100%;
+        width: 100dvw;
+        height: 100dvh;
         text-align: end;
         display: flex;
         flex-direction: column;
-        
+        overflow: auto;
     }
 
 
@@ -74,6 +78,7 @@ cursor: pointer;
 }
 
 .topDiv {
+    position: fixed;
 color: rgb(0, 0, 0);
 position: relative;
 font-size: 1.5rem;
