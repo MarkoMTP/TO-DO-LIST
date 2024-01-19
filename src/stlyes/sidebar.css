@@ -1,4 +1,18 @@
+@font-face {
+    font-family: teko ;
+    src: url(../assets/Teko-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: cave;
+    src: url(../assets/Caveat-VariableFont_wght.ttf);
+}
+
+
+
+
+
 .sidebar {
+
     margin-left: 0px;
     background-color: rgb(231, 227, 227);
     border: 0.4px rgb(0, 0, 0) solid;
@@ -24,6 +38,8 @@
     cursor: pointer;}
 
     .projectH1 {
+    font-family: teko ;
+
         font-size: 3rem;
         margin-left:10px ;
         width: 100%;

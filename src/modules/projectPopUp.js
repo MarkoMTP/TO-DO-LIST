@@ -17,19 +17,22 @@ export default function openModal(div) {
 
     // Create dialog element
     const dialog1 = document.createElement("dialog");
-    dialog1.classList.add("titleDialog");
+    dialog1.classList.add("titleDialog2");
 
     // Create form element
     const form1 = document.createElement("form");
     form1.setAttribute("method", "dialog");
-    form1.setAttribute("class", "formProject");
+    form1.setAttribute("class", "formProject2");
+
+    const projectLabel = document.createElement("h2")
+    projectLabel.textContent = "Create Project "
 
 
     // Create input element
     const input1 = document.createElement("input");
     input1.setAttribute("type", "text");
     input1.setAttribute("name", "title");
-    input1.setAttribute("id", "title");
+    input1.setAttribute("class", "titleOfProject");
     input1.setAttribute("placeholder", "title");
     input1.setAttribute("maxlength", "11");
     input1.setAttribute("required", "")
@@ -38,15 +41,11 @@ export default function openModal(div) {
 
     //date input creating
 
-    const inputDate = document.createElement("input");
-    inputDate.setAttribute("type", "date");
-    inputDate.setAttribute("id", "date");
-
 
 //creating submit button
 const submitBtn = document.createElement("button");
 submitBtn.setAttribute('type', 'submit')
-submitBtn.setAttribute('class', 'submitBtn')
+submitBtn.setAttribute('class', 'submitBtnProject')
 submitBtn.textContent = "Submit"
 
 submitBtn.addEventListener("click", () => {
@@ -54,7 +53,7 @@ event.preventDefault()
 
 
 
-const newProject =  ProjectFactory( input1.value, inputDate.value)
+const newProject =  ProjectFactory( input1.value)
 projectCollection.push(newProject);
 createDomProjects(div, newProject);
 
@@ -65,11 +64,11 @@ dialog1.close()
 
 
 
-// dialog1.style.display = "none"
+dialog1.style.display = "none"
 })
 //
+form1.appendChild(projectLabel);
     
-    form1.appendChild(inputDate);
     form1.appendChild(input1);
 
     form1.appendChild(submitBtn)

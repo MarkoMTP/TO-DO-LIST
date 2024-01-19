@@ -2,6 +2,12 @@
     font-family: rubik;
     src: url(./assets/RubikBrokenFax-Regular.ttf);
 }
+@font-face {
+    font-family: instR ;
+    src: url(./assets/InstrumentSerif-Regular.ttf);
+}
+
+
 
 body , html {
     margin: 0;
@@ -37,7 +43,7 @@ body , html {
 .header{
 display: flex;
 justify-content: space-between;
-font-family: rubik;
+font-family: instR;
 font-size: 1.5rem;
 border-bottom: 1px black solid;
 background-color: rgb(185, 185, 252);

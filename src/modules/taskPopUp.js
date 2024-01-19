@@ -13,23 +13,30 @@ export default function openTaskModal(div, project) {
 
     // Create dialog element
     const dialog1 = document.createElement("dialog");
-    dialog1.classList.add("titleDialog");
+    dialog1.classList.add("titleDialog1");
 
 
     // Create form element
     const form1 = document.createElement("form");
     form1.setAttribute("method", "dialog");
-    form1.setAttribute("class", "formProject");
+    form1.setAttribute("class", "formProject1");
 
 
-    // Create input element
-    const input1 = document.createElement("input");
-    input1.setAttribute("type", "text");
-    input1.setAttribute("name", "title");
-    input1.setAttribute("id", "title");
-    input1.setAttribute("placeholder", "Task");
+
+    const taskName = document.createElement("h1")
+    taskName.classList.add("taskName")
+    taskName.textContent = "Write what you need to do."
+
+    // Create textarea element element
+const labelTask = document.createElement("h5")
+labelTask.textContent = "The Task"
+
+    const textarea1 = document.createElement("textarea");
+    textarea1.setAttribute("name", "title");
+    textarea1.setAttribute("id", "title");
+    textarea1.setAttribute("placeholder", "Task");
     
-    input1.setAttribute("required", "")
+    textarea1.setAttribute("required", "")
 
     // line breaks
     const br1 = document.createElement("br")
@@ -37,7 +44,8 @@ export default function openTaskModal(div, project) {
     const br3 = document.createElement("br")
 
     //date input creating
-
+    const labelDate = document.createElement("label")
+    labelDate.textContent = "The Date"
     const inputDate = document.createElement("input");
     inputDate.setAttribute("type", "date");
     inputDate.setAttribute("id", "date");
@@ -45,9 +53,13 @@ export default function openTaskModal(div, project) {
 
 
     // priority select 
+    const labelP = document.createElement("label")
+    labelP.textContent = "The Priority"
+
 
     const selectBtn = document.createElement("select")
     selectBtn.setAttribute("name", "priority")
+    selectBtn.classList.add("select1")
 
     const option1 = document.createElement("option")
     option1.setAttribute("value", "Low Priority")
@@ -81,7 +93,7 @@ submitBtn.textContent = "Submit"
 
 submitBtn.addEventListener("click", () => {
 event.preventDefault()
-addTaskToProject(div, project, input1.value, inputDate.value, selectBtn.value)
+addTaskToProject(div, project, textarea1.value, inputDate.value, selectBtn.value)
 
 
 dialog1.close()
@@ -95,12 +107,15 @@ selectBtn.appendChild(option3)
 
 
     
- 
-form1.appendChild(input1);
+form1.appendChild(taskName);
+
+form1.appendChild(textarea1);
 form1.appendChild(br1);
+
 
    form1.appendChild(inputDate);
    form1.appendChild(br2);
+   
 
    form1.appendChild(selectBtn);
 

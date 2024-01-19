@@ -1,11 +1,29 @@
+@font-face {
+    font-family: rubik;
+    src: url(../assets/RubikBrokenFax-Regular.ttf);
+}
+@font-face {
+    font-family: instR ;
+    src: url(../assets/InstrumentSerif-Regular.ttf);
+}
+@font-face {
+    font-family: teko ;
+    src: url(../assets/Teko-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: cave;
+    src: url(../assets/Caveat-VariableFont_wght.ttf);
+}
+
 
 
 .projectBox {
+    font-family: cave;
 
-border: red 1px solid;
+
 width: 90%;
 margin: 10px;
-height: 30px;
+height: 4rem;
 display: flex;
 align-items: center;
 justify-content: space-around;
@@ -16,9 +34,22 @@ font-weight: 600;
 
 }
 
+.projectName {
+font-size: 1.7rem;
+color: black;
+
+}
+
+.projectName:hover {
+font-size: 2.2rem;
+
+
+}
+
+
 .projectBox:hover {
-    background-color: burlywood;
-    height: 50px;
+    background-color: rgb(255, 183, 183);
+    height: rem;
 cursor: pointer;
 }
 
@@ -28,3 +59,23 @@ font-size: 0.8rem;
 
 
 }
+
+.projectBtns {
+font-family: teko;
+    width: 4rem;
+    height: 2rem;
+border-radius: 10px;
+padding: 5px;
+font-size: 1rem;
+background-color: rgba(255, 253, 253, 0.5);
+}
+
+.projectBtns:hover {
+
+font-size: 1.3rem;
+    width: 5rem;
+    height: 3rem;
+cursor: pointer;
+/*  */
+} 
+

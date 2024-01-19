@@ -1,8 +1,28 @@
+@font-face {
+    font-family: inst ;
+    src: url(../assets/InstrumentSerif-Italic.ttf);
+}
+@font-face {
+    font-family: instR ;
+    src: url(../assets/InstrumentSerif-Regular.ttf);
+}
+@font-face {
+    font-family: teko ;
+    src: url(../assets/Teko-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:cave;
+    src: url(../assets/Caveat-VariableFont_wght.ttf);
+}
+
+
+
 
 
 
 .taskDiv {
-    
+   
+   padding: 1rem;
 background-color: rgb(255, 255, 255);
 border: rgb(255, 225, 225) 1px solid;
 margin-top: 5rem;
@@ -15,19 +35,29 @@ justify-content: space-between;
 align-items: center;
     }
 
-    .taskTitle {
+    .infoHeading {
+
+        font-family: cave;
+        border-bottom: 1px black solid;
+
+    }
+
+    .taskTitle1 {
+        font-family: teko;
+       padding: 5px;
         margin: 5px;
         background-color: rgb(255, 251, 251);
-        font-size: 1rem;
+        font-size: 1.3rem;
         width: 80%;
         height: 90%;
-        border: 1px rgb(0, 0, 0) solid;
+        border: 1px rgb(0, 0, 0) dotted;
         text-align: left;
         display: flex;
         align-items: top
 ;
         }
         .taskDate {
+
 
             border: black;
             font-size: 1.3rem;
@@ -36,7 +66,7 @@ font-style: italic;
         }
 
         .taskPriority {
-     
+           
         font-size: 1.3rem;
         margin-top: 5px;
         }
@@ -77,6 +107,29 @@ cursor: pointer;
 
 }
 
+.deleteTaskBtn {
+
+    width: 4rem;
+    height: 2rem;
+background-color: white;
+border-radius: 10px;
+padding: 5px;
+
+}
+
+.deleteTaskBtn:hover {
+
+font-size: 1.3rem;
+    width: 5rem;
+    height: 4rem;
+cursor: pointer;
+/*  */
+} 
+
+.projectHeader {
+    font-family: teko;
+}
+
 .topDiv {
     position: fixed;
 color: rgb(0, 0, 0);
@@ -105,40 +158,171 @@ align-items: center;
 /* this is the pop up dialog/form  */
 
 
+.titleDialog1 {
+    height: 40rem;
+    width: 50rem;
+    background-color:  rgba(149, 2, 146, 0.9);
+    
 
-.titleDialog {
-    width: 20rem;
-height: 10rem;
+  }
+  
+  .submitBtn {
+  
+        display: grid;
+        grid-area: submitB;
+        color: #000000;
+        font-size: 1rem;
+       
+        padding: 12px; /* Increased padding for a larger button */
+        border-radius: 11px;
+        
+        
+        background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(63, 165, 255) 100%);
+        
+        /* border: 2px solid rgb(28, 110, 164); */
+        justify-self: center; /* Centered horizontally */
+        align-self: end; /* Positioned at the bottom */
+     /* Adjusted button width */
+    width: 10rem;
+      
+  }
+
+  .submitBtn:hover {
+    font-size: 2rem;
 
 
-background-color: #fff;
-padding: 5rem;
-overflow: hidden;
-border-radius: 8px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
-.submitBtn {
+    cursor: pointer;
+    width: 10rem;
+
+  }
 
 
-width: 5rem;
-}
+  #title {
+    grid-area: task;
+    width: 30rem;
+    height: 28rem;
+    display: grid;
+    align-items: center; /* Centered vertically */
+    justify-content: center; /* Centered horizontally */
+  }
 
-#title {
+  
+  .select1 {
+    grid-area: selectBtn;
+    justify-items: end;
+    width: 9rem;
+    height: 3.5rem; /* Adjusted height for a bit larger size */
+    display: flex; /* Used flexbox for easier centering */
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(143, 255, 64);
 
-color: black ;
-font-size: 1rem;
+    /* border: 2px solid red; Increased border width */
+    border-radius: 8px; /* Added border-radius for a rounded appearance */
+  }
+  
+  #date {
+    grid-area: date;
+    width: 8rem;
+    height: 3.5rem; /* Adjusted height for a bit larger size */
+    display: flex; /* Used flexbox for easier centering */
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    background-color: rgb(91, 255, 225);
+    /* border: 2px solid red; Increased border width */
+    border-radius: 8px; /* Added border-radius for a rounded appearance */
+  }
+
+  
+  
+  #date input[type="date"] {
+    width: 90%; /* Adjusted width for better visibility */
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  
+  .taskName {
+    grid-area: title;
+    display: grid;
+    font-family: cave;
+    color: white;
+    font-size: 2rem;
+    /* border: 1px solid red; */
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .formProject1 {
+    display: grid;
+    align-items: stretch;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 11rem 1fr; /* Adjusted column widths */
+    grid-template-areas:
+      "title title"
+      "date task"
+      "selectBtn task"
+      "submitB submitB"; /* Adjusted grid areas */
+  
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+  }
 
 
 
-}
+/* for form of the project
+ */
 
-.formProject {
+ .formProject2 {
 
-display: flex;
+    display: flex;
 flex-direction: column;
-align-items: center;
-justify-content: center;
-gap: 5px;
+    width: 10rem;
+    gap: 5px;
 
-}
+
+ }
+
+ .titleDialog2 {
+display: flex;
+justify-content: center;
+align-items: center;
+    width: 20rem;
+height: 20rem;
+background-color: rgba(255, 255, 255, 0.4); /* Set the background color */
+ 
+
+  z-index: 999; 
+
+ }
+
+ .submitBtnProject {
+
+
+
+ color: rgb(190, 148, 242);
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 0.8rem; /* Increased padding for a larger button */
+        border-radius: 0.7rem;
+
+ }
+
+
+ .submitBtnProject:hover {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    cursor: pointer;
+
+
+ } 
+
+ .titleOfProject {
+    width: 10rem;
+    font-size: 1rem;
+    height: 2rem;
+
+ }

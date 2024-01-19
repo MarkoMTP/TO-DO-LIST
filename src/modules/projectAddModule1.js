@@ -5,10 +5,10 @@ import "../stlyes/project.css"
 
 export        const projectCollection = [];
 
-export  function ProjectFactory (title, date ){
+export  function ProjectFactory (title){
             return {
                 title,
-                 date,
+             
                 tasks: [],
 
 
@@ -44,21 +44,18 @@ export  function ProjectFactory (title, date ){
                 //creating project name
                 const projectName = document.createElement("h2");
                 projectName.textContent = project.title;
-                
+                projectName.classList.add("projectName")
                 //appending projectName
                 projectBox.appendChild(projectName)
                 
-                //creating duedate 
-                const projectDate = document.createElement("h2");
-                projectDate.textContent = project.date;
-                
-                //appending due date
-                projectBox.appendChild(projectDate)
+           
+            
                 
                 
                 //creating viewTaskBUttn
                 const viewProjectBtn = document.createElement("button")
                 viewProjectBtn.textContent = 'View';
+                viewProjectBtn.classList.add("projectBtns")
                 viewProjectBtn.addEventListener("click", () => {
 
 taskContainer.innerHTML = ""
@@ -78,7 +75,8 @@ taskContainer.innerHTML = ""
                 
                 // deleteBUtton of the projectBox and its function
                 const deleteProjectBtn = document.createElement("button")
-                deleteProjectBtn.textContent = 'Del';
+                deleteProjectBtn.textContent = 'Delete';
+                deleteProjectBtn.classList.add("projectBtns")
                 deleteProjectBtn.addEventListener("click", () => {
                 
                     div.removeChild(projectBox)

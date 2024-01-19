@@ -42,8 +42,9 @@ project.tasks.forEach((task, index) => {
 
       const mainDivForTasks = document.createElement("div");
     mainDivForTasks.classList.add("taskDiv");
+  
     const taskTitle = document.createElement("h1");
-    taskTitle.classList.add("taskTitle")
+    taskTitle.classList.add("taskTitle1")
     taskTitle.textContent = task.title;
 
 
@@ -53,6 +54,7 @@ const infoHeading= document.createElement("h2")
 infoHeading.style.fontSize = "1.4rem"
 infoHeading.style.color = "darkblue"
 infoHeading.style.margin = "0"
+infoHeading.classList.add("infoHeading")
 
 
 infoHeading.textContent = "Task Info";
@@ -67,6 +69,7 @@ infoHeading.textContent = "Task Info";
 
     const deleteTaskBtn = document.createElement("button")
   deleteTaskBtn.textContent = "Delete"
+  deleteTaskBtn.classList.add("deleteTaskBtn")
 deleteTaskBtn.addEventListener("click", () => {
   div.removeChild(mainDivForTasks)
   project.tasks.splice(index, 1);
