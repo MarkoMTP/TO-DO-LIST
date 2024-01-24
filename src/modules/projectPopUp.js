@@ -14,7 +14,6 @@ export default function openModal(div) {
 
 
 
-
     // Create dialog element
     const dialog1 = document.createElement("dialog");
     dialog1.classList.add("titleDialog2");
@@ -53,9 +52,17 @@ event.preventDefault()
 
 
 
-const newProject =  ProjectFactory( input1.value)
+
+const newProject =  ProjectFactory( input1.value);
+
 projectCollection.push(newProject);
-createDomProjects(div, newProject);
+
+localStorage.setItem("Projects", JSON.stringify(projectCollection));
+
+
+createDomProjects(div);
+
+console.log(localStorage);
 
 
 console.log(projectCollection);
@@ -77,6 +84,8 @@ form1.appendChild(projectLabel);
 
     // Append dialog to body
     container.appendChild(dialog1);
+
+
 
     // Show the dialog
 dialog1.showModal()  

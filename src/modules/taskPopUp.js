@@ -3,6 +3,7 @@ import  addTask  from "./addTask.js";
 import { addTaskToProject, TaskFactory, addTaskToDom } from "./addTask.js"  
 
 import "../stlyes/taskInterFace.css"
+import { projectCollection } from "./projectAddModule1.js";
 
 export default function openTaskModal(div, project) {
 
@@ -94,6 +95,12 @@ submitBtn.textContent = "Submit"
 submitBtn.addEventListener("click", () => {
 event.preventDefault()
 addTaskToProject(div, project, textarea1.value, inputDate.value, selectBtn.value)
+
+
+
+
+
+ 
 
 
 dialog1.close()

@@ -26,16 +26,23 @@ export  function ProjectFactory (title){
   
         
 
-        
-
-
-      
 
 
 
 
-        export function createDomProjects(div, project) {
 
+        export function createDomProjects(div) {
+            div.innerHTML = ""
+
+            let projectCollection2 = localStorage.getItem("Projects")
+           let projectCollection2Parsed = JSON.parse(projectCollection2)
+            
+
+            if(projectCollection2Parsed !== null) {
+
+          
+
+            projectCollection2Parsed.forEach(project => {
 
                 const projectBox = document.createElement("div");
                 projectBox.classList.add("projectBox");
@@ -58,7 +65,7 @@ export  function ProjectFactory (title){
                 viewProjectBtn.classList.add("projectBtns")
                 viewProjectBtn.addEventListener("click", () => {
 
-taskContainer.innerHTML = ""
+                taskContainer.innerHTML = ""
 
  const {taskOfProjectDiv} = forEachProjectInterface(taskContainer, project, project.title)
   addTaskToDom(taskOfProjectDiv, project)
@@ -80,16 +87,22 @@ taskContainer.innerHTML = ""
                 deleteProjectBtn.addEventListener("click", () => {
                 
                     div.removeChild(projectBox)
+
+
                 
                 })
                 
                 
-                
+           
                 
                  
                 projectBox.appendChild(deleteProjectBtn)
                 
                 div.appendChild(projectBox)
+             }) }
+
+                else { return "Okay"}
+
 
             }
 

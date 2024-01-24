@@ -23,7 +23,7 @@ export function forEachProjectInterface(div, project, projectN) {
 
         const projectName = document.createElement("h1")      
     projectName.textContent = projectN;
-
+projectName.classList.add("projectHeader")
 
     const taskOfProjectDiv = document.createElement("div")
     
@@ -31,7 +31,7 @@ export function forEachProjectInterface(div, project, projectN) {
 
     const AddTaskButton = document.createElement("button");
     AddTaskButton.classList.add("AddTaskBtn")
-    AddTaskButton.addEventListener("click",() => {openTaskModal(taskOfProjectDiv, project)})
+    AddTaskButton.addEventListener("click",() => {openTaskModal(taskOfProjectDiv, project  )})
  
     topDiv.appendChild(projectName)
         topDiv.appendChild(AddTaskButton)

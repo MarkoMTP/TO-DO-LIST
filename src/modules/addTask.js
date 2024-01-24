@@ -26,7 +26,12 @@ export function TaskFactory(title, duedate, priority) {
 export   function addTaskToProject(div, project , title, date, priority ) {  
   div.innerHTML = '';
  const task = TaskFactory(title, date, priority);
+
   project.tasks.push(task)
+
+  
+  localStorage.setItem("Projects", JSON.stringify(projectCollection));
+
   addTaskToDom(div, project) 
 
 }
@@ -35,7 +40,7 @@ export   function addTaskToProject(div, project , title, date, priority ) {
 
 
 export   function addTaskToDom(div, project) {
-div.innerHTML = ""
+
 
 project.tasks.forEach((task, index) => {
   

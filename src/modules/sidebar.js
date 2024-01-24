@@ -22,7 +22,7 @@ export default (function addSideBar() {
     
  
   
-   const {addBtn} =  createAddProjectBtn(projectDiv)
+   const {addBtn} =  createAddProjectBtn(sideBar)
   
    addBtn.addEventListener("click", () => {
     openModal(projectDiv)
@@ -33,13 +33,15 @@ export default (function addSideBar() {
 
 
 
-
   const exampleProject =  ProjectFactory("Example ", "20.20.2002")
-  projectCollection.push(exampleProject);
+
   const exampleTask = TaskFactory("Example About How Amazing This Project Is", "20.11.2222", "important")
   exampleProject.tasks.push(exampleTask)
 
+  projectCollection.push(exampleProject);
+  
 
+  localStorage.setItem("Projects", JSON.stringify(projectCollection));
 
 
 createDomProjects(projectDiv,exampleProject)
