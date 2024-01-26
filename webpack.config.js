@@ -5,6 +5,33 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: "development", 
+
+  resolve: {
+
+      modules: ["node_modules", "src"],
+   
+    fallback: {
+      "util": require.resolve("util/"),
+      "fs": false,
+      "tls": false,
+      "net": false,
+      "path": false,
+      "zlib": false,
+      "http": false,
+      "https": false,
+      "stream": false,
+      "crypto": false,
+      "constants": false,
+      "os": false,
+      "querystring": false,
+      "vm": false,
+
+      "crypto-browserify": require.resolve('crypto-browserify'), //if you want to use this module also don't forget npm i crypto-browserify 
+    } 
+
+  },
+
+
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
@@ -19,9 +46,14 @@ module.exports = {
     clean: true,
 
   },
-  
   module: {
     rules: [ 
+      
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
         {
             test: /\.css$/i,
             use: ['style-loader', 'css-loader'],
@@ -37,4 +69,6 @@ module.exports = {
           },
   ],
      },
+
+ 
 };

@@ -6,10 +6,6 @@ import "./stlyes/taskInterFace.css"
 import "./style.css";
 
 
-
-
-
-
 export const container = document.getElementById("container")
 
 
@@ -29,6 +25,7 @@ content.appendChild(sidebarDiv)
  container.appendChild(content)
 
  addSideBar()
+
  content.appendChild(taskContainer)
 
 

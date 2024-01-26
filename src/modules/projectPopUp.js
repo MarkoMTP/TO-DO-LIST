@@ -1,3 +1,4 @@
+import { CleanPlugin } from "webpack";
 import { container } from "../index.js";
 import "../style.css"
 import { createDomProjects, ProjectFactory, projectCollection} from "./projectAddModule1.js";
@@ -40,6 +41,7 @@ export default function openModal(div) {
 
     //date input creating
 
+   
 
 //creating submit button
 const submitBtn = document.createElement("button");
@@ -52,27 +54,19 @@ event.preventDefault()
 
 
 
-
-const newProject =  ProjectFactory( input1.value);
+const newProject =  ProjectFactory(input1.value);
 
 projectCollection.push(newProject);
 
-localStorage.setItem("Projects", JSON.stringify(projectCollection));
+createDomProjects(div, newProject)
 
-
-createDomProjects(div);
-
-console.log(localStorage);
-
-
-console.log(projectCollection);
-
-dialog1.close()
-
-
+// dialog1.close()
 
 dialog1.style.display = "none"
+
 })
+
+
 //
 form1.appendChild(projectLabel);
     
@@ -85,8 +79,7 @@ form1.appendChild(projectLabel);
     // Append dialog to body
     container.appendChild(dialog1);
 
-
-
+ 
     // Show the dialog
 dialog1.showModal()  
 
@@ -94,3 +87,5 @@ dialog1.showModal()
 
     // Note: showModal() will block interaction with the rest of the page until closed
 }
+
+

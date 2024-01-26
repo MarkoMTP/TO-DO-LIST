@@ -1,5 +1,5 @@
 import { container, content, sidebarDiv } from "../index.js"
-import { createDomProjects, ProjectFactory , projectCollection } from "./projectAddModule1.js"
+import { createDomProjects, ProjectFactory , projectCollectionStorage, projectCollection } from "./projectAddModule1.js"
 import { addTaskToProject, TaskFactory, addTaskToDom } from "./addTask.js"  
 import openModal from "./projectPopUp.js"
 import { forEachProjectInterface, taskOfProjectDiv } from "./taskInterface.js"
@@ -41,14 +41,13 @@ export default (function addSideBar() {
   projectCollection.push(exampleProject);
   
 
-  localStorage.setItem("Projects", JSON.stringify(projectCollection));
-
 
 createDomProjects(projectDiv,exampleProject)
 
 sideBar.appendChild(projectDiv)
   
   sidebarDiv.appendChild(sideBar)
+
   
   return { sideBar, projectDiv }
   })
