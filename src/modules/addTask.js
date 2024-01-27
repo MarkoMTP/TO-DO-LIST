@@ -31,6 +31,8 @@ export   function addTaskToProject(div, project , title, date, priority ) {
   project.tasks.push(task)
 
   
+  
+  localStorage.setItem("Projects", JSON.stringify(projectCollection))
 
   addTaskToDom(div, project) 
 

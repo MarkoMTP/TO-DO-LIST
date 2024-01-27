@@ -3,6 +3,7 @@ import { addTaskToDom } from "./addTask.js";
 import "../stlyes/project.css"
 
 
+
 export        const projectCollection = [];
 
 export  function ProjectFactory (title){
@@ -19,12 +20,11 @@ export  function ProjectFactory (title){
 
 
 
-     
+
 
 
         export function createDomProjects(div, project ) {
        
-               
 
                 const projectBox = document.createElement("div");
                 projectBox.classList.add("projectBox");

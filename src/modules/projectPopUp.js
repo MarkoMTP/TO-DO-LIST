@@ -56,9 +56,18 @@ event.preventDefault()
 
 const newProject =  ProjectFactory(input1.value);
 
-projectCollection.push(newProject);
+  projectCollection.push(newProject);
 
-createDomProjects(div, newProject)
+  localStorage.setItem("Projects", JSON.stringify(projectCollection))
+  let projectsParsed = JSON.parse(localStorage.getItem("Projects"))   
+
+
+  div.innerHTML = "";
+
+  createFromLocal(projectsParsed, div)
+
+
+
 
 dialog1.close()
 
@@ -89,3 +98,15 @@ dialog1.showModal()
 }
 
 
+
+ export function createFromLocal (parsed, div) {
+
+    parsed.forEach(project => {
+
+        createDomProjects(div, project)
+
+    })
+
+
+
+}
