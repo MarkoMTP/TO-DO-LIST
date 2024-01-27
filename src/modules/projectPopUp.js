@@ -1,4 +1,4 @@
-import { CleanPlugin } from "webpack";
+
 import { container } from "../index.js";
 import "../style.css"
 import { createDomProjects, ProjectFactory, projectCollection} from "./projectAddModule1.js";
@@ -60,7 +60,7 @@ projectCollection.push(newProject);
 
 createDomProjects(div, newProject)
 
-// dialog1.close()
+dialog1.close()
 
 dialog1.style.display = "none"
 
