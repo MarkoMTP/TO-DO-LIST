@@ -1,112 +1,80 @@
-
 import { container } from "../index.js";
-import "../style.css"
-import { createDomProjects, ProjectFactory, projectCollection} from "./projectAddModule1.js";
-
-
-
-
-
-
+import "../style.css";
+import { createDomProjects, ProjectFactory } from "./projectAddModule1.js";
 
 export default function openModal(div) {
+  // Create dialog element
+  const dialog1 = document.createElement("dialog");
+  dialog1.classList.add("titleDialog2");
 
+  // Create form element
+  const form1 = document.createElement("form");
+  form1.setAttribute("method", "dialog");
+  form1.setAttribute("class", "formProject2");
 
+  const projectLabel = document.createElement("h2");
+  projectLabel.textContent = "Create Project ";
 
+  // Create input element
+  const input1 = document.createElement("input");
+  input1.setAttribute("type", "text");
+  input1.setAttribute("name", "title");
+  input1.setAttribute("class", "titleOfProject");
+  input1.setAttribute("placeholder", "title");
+  input1.setAttribute("maxlength", "11");
+  input1.setAttribute("required", "");
 
+  // date input creating
 
-    // Create dialog element
-    const dialog1 = document.createElement("dialog");
-    dialog1.classList.add("titleDialog2");
+  // creating submit button
+  const submitBtn = document.createElement("button");
+  submitBtn.setAttribute("type", "submit");
+  submitBtn.setAttribute("class", "submitBtnProject");
+  submitBtn.textContent = "Submit";
 
-    // Create form element
-    const form1 = document.createElement("form");
-    form1.setAttribute("method", "dialog");
-    form1.setAttribute("class", "formProject2");
+  submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
 
-    const projectLabel = document.createElement("h2")
-    projectLabel.textContent = "Create Project "
+    const newProject = ProjectFactory(input1.value);
+    const projectCollection =
+      JSON.parse(localStorage.getItem("Projects")) || [];
 
+    projectCollection.push(newProject);
 
-    // Create input element
-    const input1 = document.createElement("input");
-    input1.setAttribute("type", "text");
-    input1.setAttribute("name", "title");
-    input1.setAttribute("class", "titleOfProject");
-    input1.setAttribute("placeholder", "title");
-    input1.setAttribute("maxlength", "11");
-    input1.setAttribute("required", "")
+    localStorage.clear();
+    localStorage.setItem("Projects", JSON.stringify(projectCollection));
+    const projectsParsed = JSON.parse(localStorage.getItem("Projects"));
 
+    div.innerHTML = "";
+    createFromLocal(projectsParsed, div);
 
+    dialog1.close();
 
-    //date input creating
+    dialog1.style.display = "none";
+  });
 
-   
+  //
+  form1.appendChild(projectLabel);
 
-//creating submit button
-const submitBtn = document.createElement("button");
-submitBtn.setAttribute('type', 'submit')
-submitBtn.setAttribute('class', 'submitBtnProject')
-submitBtn.textContent = "Submit"
+  form1.appendChild(input1);
 
-submitBtn.addEventListener("click", () => {
-event.preventDefault()
+  form1.appendChild(submitBtn);
+  // Append form to dialog
+  dialog1.appendChild(form1);
 
+  // Append dialog to body
+  container.appendChild(dialog1);
 
+  // Show the dialog
+  dialog1.showModal();
 
-const newProject =  ProjectFactory(input1.value);
-
-  projectCollection.push(newProject);
-
-  localStorage.setItem("Projects", JSON.stringify(projectCollection))
-  let projectsParsed = JSON.parse(localStorage.getItem("Projects"))   
-
-
-  div.innerHTML = "";
-
-  createFromLocal(projectsParsed, div)
-
-
-
-
-dialog1.close()
-
-dialog1.style.display = "none"
-
-})
-
-
-//
-form1.appendChild(projectLabel);
-    
-    form1.appendChild(input1);
-
-    form1.appendChild(submitBtn)
-    // Append form to dialog
-    dialog1.appendChild(form1);
-
-    // Append dialog to body
-    container.appendChild(dialog1);
-
- 
-    // Show the dialog
-dialog1.showModal()  
-
-
-
-    // Note: showModal() will block interaction with the rest of the page until closed
+  // Note: showModal() will block interaction with the rest of the page until closed
 }
 
+export function createFromLocal(parsed, div) {
+  div.innerHTML = "";
 
-
- export function createFromLocal (parsed, div) {
-
-    parsed.forEach(project => {
-
-        createDomProjects(div, project)
-
-    })
-
-
-
+  parsed.forEach((project) => {
+    createDomProjects(div, project);
+  });
 }
