@@ -1,328 +1,271 @@
 @font-face {
-    font-family: inst ;
-    src: url(../assets/InstrumentSerif-Italic.ttf);
+  font-family: inst;
+  src: url(../assets/InstrumentSerif-Italic.ttf);
 }
 @font-face {
-    font-family: instR ;
-    src: url(../assets/InstrumentSerif-Regular.ttf);
+  font-family: instR;
+  src: url(../assets/InstrumentSerif-Regular.ttf);
 }
 @font-face {
-    font-family: teko ;
-    src: url(../assets/Teko-VariableFont_wght.ttf);
+  font-family: teko;
+  src: url(../assets/Teko-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family:cave;
-    src: url(../assets/Caveat-VariableFont_wght.ttf);
+  font-family: cave;
+  src: url(../assets/Caveat-VariableFont_wght.ttf);
 }
-
-
-
-
-
 
 .taskDiv {
-   
-   padding: 1rem;
-background-color: rgb(255, 255, 255);
-border: rgb(255, 225, 225) 1px solid;
-margin-top: 5rem;
-margin-left: 10rem;
-margin-bottom: 5rem;
-width: 70rem;
-height: 10rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-    }
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+  width: 70rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .infoHeading {
+.infoHeading {
+  font-family: cave;
+  border-bottom: 1px black solid;
+}
 
-        font-family: cave;
-        border-bottom: 1px black solid;
+.taskTitle1 {
+  font-family: teko;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(255, 251, 251);
+  font-size: 1.3rem;
+  width: 80%;
+  height: 90%;
+  border: 1px rgb(0, 0, 0) dotted;
+  text-align: left;
+  display: flex;
+  align-items: top;
+}
+.taskDate {
+  border: black;
+  font-size: 1.3rem;
+  font-style: italic;
+}
 
-    }
+.taskPriority {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
 
-    .taskTitle1 {
-        font-family: teko;
-       padding: 5px;
-        margin: 5px;
-        background-color: rgb(255, 251, 251);
-        font-size: 1.3rem;
-        width: 80%;
-        height: 90%;
-        border: 1px rgb(0, 0, 0) dotted;
-        text-align: left;
-        display: flex;
-        align-items: top
-;
-        }
-        .taskDate {
-
-
-            border: black;
-            font-size: 1.3rem;
-font-style: italic;
-
-        }
-
-        .taskPriority {
-           
-        font-size: 1.3rem;
-        margin-top: 5px;
-        }
-
-    .taskContainer {
-        position: relative;
-        background-color: rgb(253, 234, 255);
-        width: 100dvw;
-        height: 100dvh;
-        text-align: end;
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-    }
-
-
-
+.taskContainer {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 100dvw;
+  height: 100dvh;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
 
 .AddTaskBtn {
-
-    background:url(../assets/folder-plus-svgrepo-com.svg) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-right: 10px;
-    width: 6rem;
-    height: 6rem;
-border: 0;
-
-
+  background: url(../assets/folder-plus-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 10px;
+  width: 6rem;
+  height: 6rem;
+  border: 0;
 }
 
 .AddTaskBtn:hover {
-
-width: 8rem;
-height: 8rem;
-cursor: pointer;
-
+  width: 8rem;
+  height: 8rem;
+  cursor: pointer;
 }
 
 .deleteTaskBtn {
-
-    width: 4rem;
-    height: 2rem;
-background-color: white;
-border-radius: 10px;
-padding: 5px;
-
+  width: 4rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .deleteTaskBtn:hover {
-
-font-size: 1.3rem;
-    width: 5rem;
-    height: 4rem;
-cursor: pointer;
-/*  */
-} 
+  font-size: 1.3rem;
+  width: 5rem;
+  height: 4rem;
+  cursor: pointer;
+  /*  */
+}
 
 .projectHeader {
-    font-family: teko;
+  font-family: teko;
 }
 
 .topDiv {
-    position: fixed;
-color: rgb(0, 0, 0);
-position: relative;
-font-size: 1.5rem;
-border-bottom: 1px rgb(0, 0, 0) solid;
-display: flex;
-justify-content: center;
-align-items: center;
+  position: fixed;
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-size: 1.5rem;
+  border-bottom: 1px rgb(0, 0, 0) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .divForDate {
-display: flex;
-flex-direction: column;
-width: 30%;
-height: 100%;
-justify-content: center;
-align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
-
 
 /* this is the pop up dialog/form  */
 
-
 .titleDialog1 {
-    height: 40rem;
-    width: 50rem;
-    background-color:  rgba(149, 2, 146, 0.9);
-    
+  height: 40rem;
+  width: 50rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 
-  }
-  
-  .submitBtn {
-  
-        display: grid;
-        grid-area: submitB;
-        color: #000000;
-        font-size: 1rem;
-       
-        padding: 12px; /* Increased padding for a larger button */
-        border-radius: 11px;
-        
-        
-        background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(63, 165, 255) 100%);
-        
-        /* border: 2px solid rgb(28, 110, 164); */
-        justify-self: center; /* Centered horizontally */
-        align-self: end; /* Positioned at the bottom */
-     /* Adjusted button width */
-    width: 10rem;
-      
-  }
+.submitBtn {
+  display: grid;
+  grid-area: submitB;
+  color: #000000;
+  font-size: 1rem;
 
-  .submitBtn:hover {
-    font-size: 2rem;
+  padding: 12px; /* Increased padding for a larger button */
+  border-radius: 11px;
 
+  background-image: linear-gradient(rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);
 
+  /* border: 2px solid rgb(28, 110, 164); */
+  justify-self: center; /* Centered horizontally */
+  align-self: end; /* Positioned at the bottom */
+  /* Adjusted button width */
+  width: 10rem;
+}
 
-    cursor: pointer;
-    width: 10rem;
+.submitBtn:hover {
+  font-size: 2rem;
 
-  }
+  cursor: pointer;
+  width: 10rem;
+}
 
+#title {
+  grid-area: task;
+  width: 30rem;
+  height: 28rem;
+  display: grid;
+  align-items: center; /* Centered vertically */
+  justify-content: center; /* Centered horizontally */
+}
 
-  #title {
-    grid-area: task;
-    width: 30rem;
-    height: 28rem;
-    display: grid;
-    align-items: center; /* Centered vertically */
-    justify-content: center; /* Centered horizontally */
-  }
+.select1 {
+  grid-area: selectBtn;
+  justify-items: end;
+  width: 9rem;
+  height: 3.5rem; /* Adjusted height for a bit larger size */
+  display: flex; /* Used flexbox for easier centering */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(0, 0, 0);
 
-  
-  .select1 {
-    grid-area: selectBtn;
-    justify-items: end;
-    width: 9rem;
-    height: 3.5rem; /* Adjusted height for a bit larger size */
-    display: flex; /* Used flexbox for easier centering */
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(143, 255, 64);
+  /* border: 2px solid red; Increased border width */
+  border-radius: 8px; /* Added border-radius for a rounded appearance */
+}
 
-    /* border: 2px solid red; Increased border width */
-    border-radius: 8px; /* Added border-radius for a rounded appearance */
-  }
-  
-  #date {
-    grid-area: date;
-    width: 8rem;
-    height: 3.5rem; /* Adjusted height for a bit larger size */
-    display: flex; /* Used flexbox for easier centering */
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    background-color: rgb(91, 255, 225);
-    /* border: 2px solid red; Increased border width */
-    border-radius: 8px; /* Added border-radius for a rounded appearance */
-  }
+#date {
+  grid-area: date;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-  
-  
-  #date input[type="date"] {
-    width: 90%; /* Adjusted width for better visibility */
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  
-  
-  .taskName {
-    grid-area: title;
-    display: grid;
-    font-family: cave;
-    color: white;
-    font-size: 2rem;
-    /* border: 1px solid red; */
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .formProject1 {
-    display: grid;
-    align-items: stretch;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 11rem 1fr; /* Adjusted column widths */
-    grid-template-areas:
-      "title title"
-      "date task"
-      "selectBtn task"
-      "submitB submitB"; /* Adjusted grid areas */
-  
-    width: 100%;
-    height: 100%;
-    gap: 10px;
-  }
+  display: flex; /* Used flexbox for easier centering */
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgb(250, 255, 254);
+  /* border: 2px solid red; Increased border width */
+  border-radius: 8px; /* Added border-radius for a rounded appearance */
+}
 
+#date input[type="date"] {
+  width: 90%; /* Adjusted width for better visibility */
+  padding: 8px;
+  box-sizing: border-box;
+}
 
+.taskName {
+  grid-area: title;
+  display: grid;
+  font-family: cave;
+  color: white;
+  font-size: 2rem;
+  /* border: 1px solid red; */
+  justify-items: center;
+  align-items: center;
+}
+
+.formProject1 {
+  display: grid;
+  align-items: stretch;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 11rem 1fr; /* Adjusted column widths */
+  grid-template-areas:
+    "title title"
+    "date task"
+    "selectBtn task"
+    "submitB submitB"; /* Adjusted grid areas */
+
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
 
 /* for form of the project
  */
 
- .formProject2 {
+.formProject2 {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 5px;
+}
 
-    display: flex;
-flex-direction: column;
-    width: 10rem;
-    gap: 5px;
+.titleDialog2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0.4); /* Set the background color */
 
+  z-index: 999;
+}
 
- }
+.submitBtnProject {
+  color: rgb(190, 148, 242);
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0.8rem; /* Increased padding for a larger button */
+  border-radius: 0.7rem;
+}
 
- .titleDialog2 {
-display: flex;
-justify-content: center;
-align-items: center;
-    width: 20rem;
-height: 20rem;
-background-color: rgba(255, 255, 255, 0.4); /* Set the background color */
- 
+.submitBtnProject:hover {
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  cursor: pointer;
+}
 
-  z-index: 999; 
-
- }
-
- .submitBtnProject {
-
-
-
- color: rgb(190, 148, 242);
-        font-size: 1rem;
-        line-height: 1rem;
-        padding: 0.8rem; /* Increased padding for a larger button */
-        border-radius: 0.7rem;
-
- }
-
-
- .submitBtnProject:hover {
-    font-size: 1.3rem;
-    line-height: 1.4rem;
-    cursor: pointer;
-
-
- } 
-
- .titleOfProject {
-    width: 10rem;
-    font-size: 1rem;
-    height: 2rem;
-
- }
+.titleOfProject {
+  width: 10rem;
+  font-size: 1rem;
+  height: 2rem;
+}

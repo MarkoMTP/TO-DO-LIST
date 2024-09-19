@@ -1,8 +1,4 @@
-import {
-  createDomProjects,
-  ProjectFactory,
-  projectCollection,
-} from "./projectAddModule1.js";
+import {} from "./projectAddModule1.js";
 import { content, sidebarDiv } from "../index.js";
 import "../stlyes/taskInterFace.css";
 
@@ -77,6 +73,5 @@ export function addTaskToDom(div, project) {
     mainDivForTasks.appendChild(divForDate);
 
     div.appendChild(mainDivForTasks);
-    console.log(projectCollection);
   });
 }

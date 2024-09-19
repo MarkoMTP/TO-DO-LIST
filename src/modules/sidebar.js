@@ -1,13 +1,12 @@
 import { sidebarDiv } from "../index.js";
-import { ProjectFactory } from "./projectAddModule1.js";
-import { TaskFactory } from "./addTask.js";
-import openModal from "./projectPopUp.js";
-import { forEachProjectInterface } from "./taskInterface.js";
+import openModal, { createFromLocal } from "./projectPopUp.js";
+import { createDomProjects, ProjectFactory } from "./projectAddModule1.js";
 import "../stlyes/project.css";
 import "../stlyes/sidebar.css";
 
 export default (function addSideBar() {
   const sideBar = document.createElement("div");
+
   sideBar.classList.add("sidebar");
 
   const projectDiv = document.createElement("div");
@@ -17,25 +16,20 @@ export default (function addSideBar() {
 
   const { addBtn } = createAddProjectBtn(sideBar);
 
+  // Retrieve existing projects from localStorage
+  const projectCollection = JSON.parse(localStorage.getItem("Projects")) || [];
+
+  // Render existing projects on page load
+  createFromLocal(projectCollection, projectDiv);
+
   addBtn.addEventListener("click", () => {
     openModal(projectDiv);
-
-    return { projectDiv };
   });
 
-  const exampleProject = ProjectFactory("Example ", "20.20.2002");
-
-  const exampleTask = TaskFactory(
-    "Example About How Amazing This Project Is",
-    "20.11.2222",
-    "important"
-  );
-  exampleProject.tasks.push(exampleTask);
-  const projectCollection = JSON.parse(localStorage.getItem("Projects")) || [];
-  projectCollection.push(exampleProject);
-
+  // Append projectDiv to the sidebar
   sideBar.appendChild(projectDiv);
 
+  // Append sidebar to sidebarDiv
   sidebarDiv.appendChild(sideBar);
 
   return { sideBar, projectDiv };

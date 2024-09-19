@@ -1,109 +1,92 @@
 @font-face {
-    font-family: rubik;
-    src: url(./assets/RubikBrokenFax-Regular.ttf);
+  font-family: rubik;
+  src: url(./assets/RubikBrokenFax-Regular.ttf);
 }
 @font-face {
-    font-family: instR ;
-    src: url(./assets/InstrumentSerif-Regular.ttf);
+  font-family: instR;
+  src: url(./assets/InstrumentSerif-Regular.ttf);
 }
 
-
-
-body , html {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+body,
+html {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .container {
-  
-    height: 100dvh;
-    width: 100dvw;
-    
-    
+  height: 100dvh;
+  width: 100dvw;
 }
 
 .menuBtn {
-    width: 80px;
-    height: 80px;
-    background: url(./assets/menuBtn.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 0.7rem;
-    margin-left: 0.7rem;
+  width: 80px;
+  height: 80px;
+  background: url(./assets/menuBtn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
 }
 
 .menuBtn:hover {
-    cursor: pointer;
-    background-color: bisque;
+  cursor: pointer;
+  background-color: bisque;
 }
 
-.header{
-display: flex;
-justify-content: space-between;
-font-family: instR;
-font-size: 1.5rem;
-border-bottom: 1px black solid;
-background-color: rgb(185, 185, 252);
-padding: 4px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: instR;
+  font-size: 1.5rem;
+  border-bottom: 1px black solid;
+  background-color: rgb(95, 184, 235);
+  padding: 4px;
 }
 
 .rndmBtn {
-    width: 80px;
-    height: 80px;
-    background: url(./assets/cool-svgrepo-com.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-border: 0;
-margin-top: 0.7rem;
-    margin-right: 0.7rem;
+  width: 80px;
+  height: 80px;
+  background: url(./assets/cool-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  margin-top: 0.7rem;
+  margin-right: 0.7rem;
 }
 
 .content {
-width: 100dvw;
-height: 100dvh;
-display: flex;
-
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
 }
 
-
-
-
 .titleDialog {
-        width: 20rem;
-    height: 10rem;
+  width: 20rem;
+  height: 10rem;
 
-    
-    background-color: #fff;
-    padding: 5rem;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 5rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .submitBtn {
-
-
-    width: 5rem;
+  width: 5rem;
 }
 
 #title {
-
-color: black ;
-font-size: 1rem;
-
-
-
+  color: black;
+  font-size: 1rem;
 }
 
 .formProject {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }

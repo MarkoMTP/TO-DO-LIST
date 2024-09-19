@@ -1,72 +1,61 @@
 @font-face {
-    font-family: teko ;
-    src: url(../assets/Teko-VariableFont_wght.ttf);
+  font-family: teko;
+  src: url(../assets/Teko-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family: cave;
-    src: url(../assets/Caveat-VariableFont_wght.ttf);
+  font-family: cave;
+  src: url(../assets/Caveat-VariableFont_wght.ttf);
 }
-
-
-
-
 
 .sidebar {
-
-    margin-left: 0px;
-    background-color: rgb(231, 227, 227);
-    border: 0.4px rgb(0, 0, 0) solid;
-    width: 20rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    align-items: center;
-    
+  margin-left: 0px;
+  background-color: rgb(255, 255, 255);
+  border: 0.4px rgb(0, 0, 0) solid;
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: center;
 }
 
+.myButton {
+  width: 40%;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin: 0.3rem;
+  background-color: rgb(223, 160, 78);
+}
+.myButton:hover {
+  background: #a4a4a4;
+  cursor: pointer;
+}
 
-    .myButton {
-        width: 40%;
-        font-size: 1rem;
-        border-radius: 10px;
-        margin: 0.3rem;
-        background-color: antiquewhite;
-    }
-        .myButton:hover {
-        background: #A4A4A4; 
-    cursor: pointer;}
+.projectH1 {
+  font-family: teko;
 
-    .projectH1 {
-    font-family: teko ;
+  font-size: 3rem;
+  margin-left: 10px;
+  width: 100%;
+  border-bottom: 3px black dotted;
+  margin-bottom: -6px;
+}
+.myAddButton {
+  width: 40%;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-left: 0.3rem;
+  padding: 0.3rem;
+  align-self: center;
+}
+.myAddButton:hover {
+  background: #e8bebe;
+  cursor: pointer;
+}
 
-        font-size: 3rem;
-        margin-left:10px ;
-        width: 100%;
-    border-bottom: 3px black dotted;
-    margin-bottom: -6px;
-
-    }
-    .myAddButton {
-        width: 40%;
-        font-size: 1rem;
-        border-radius: 10px;
-        margin-left: 0.3rem;
-        padding: 0.3rem;
-        align-self: center;
-    }
-    .myAddButton:hover {
-        background: #e8bebe; 
-    cursor: pointer;}
-
-
-    .projectDiv {
-
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-     
-    }
-
-
+.projectDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}

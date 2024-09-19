@@ -1,6 +1,4 @@
-import { content } from "../index.js";
 import "../stlyes/taskInterFace.css";
-import { addTaskToDom } from "./addTask.js";
 import openTaskModal from "./taskPopUp.js";
 
 export const taskContainer = document.createElement("div");
